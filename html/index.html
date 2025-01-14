@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/index.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Password Generator</title>
+</head>
+<body>
+    <div id="register-container">
+        <div id="register-banner">
+            <div id="banner-layer">
+                <h1>Welcome!</h1>
+            </div>
+        </div>
+        <div id="register-form">
+            <h2>Register an account:</h2>
+            <p>Create an account to fully utilize the Generator</p>
+            <div class="form-control">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Name">
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" type="email" id="email" placeholder="Email">
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="text" type="password" id="password" placeholder="Password">
+            </div>
+            <p><span id="generate-password">Auto strong password</span></p>
+            <div id="generated-password">
+                <p>Your password:</p>
+                <h4></h4>
+            </div>
+            <div class="form-control">
+                <label for="confirmpassword">Confirm</label>
+                <input type="text" type="confirmpassword" id="confirmpassword" placeholder="Confirm">
+            </div>
+            <input type="submit" value="Register">
+        </div>
+    </div>
+</body>
+</html>
