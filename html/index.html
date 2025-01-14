@@ -32,10 +32,31 @@
                 <label for="password">Password</label>
                 <input type="text" type="password" id="password" placeholder="Password">
             </div>
-            <p><span id="generate-password">Auto strong password</span></p>
+            <p><span id="open-generate-password">Auto strong password</span></p>
+            <div id="generate-options" class="hide">
+                <p>Pick how you would like your password to be:</p>
+                <div class="form-control">
+                    <label for="length">Password's length:</label>
+                    <input type="text" id="length" name="length" value="10">
+                </div>
+                <div class="form-control">
+                    <label for="letters">letters:</label>
+                    <input type="checkbox" id="letters" name="letters" checked>
+                </div>
+                <div class="form-control">
+                    <label for="numbers">Numbers:</label>
+                    <input type="checkbox" id="numbers" name="numbers" checked>
+                </div>
+                <div class="form-control">
+                    <label for="symbols">Symbols:</label>
+                    <input type="checkbox" id="symbols" name="symbols" checked>
+                </div>
+                <button id="generate-password">Generate your password</button>
+            </div>
             <div id="generated-password">
                 <p>Your password:</p>
                 <h4></h4>
+                <button id="copy-password">Copy</button>
             </div>
             <div class="form-control">
                 <label for="confirmpassword">Confirm</label>

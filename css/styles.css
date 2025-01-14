@@ -92,17 +92,17 @@ input:focus {
     color: #a3a3a3fa;
 }
 
-#generate-password{
+#open-generate-password{
     font-weight: bold;
     cursor: pointer;
     transition: .4s;
 }
 
-#generate-password{
+#open-generate-password{
     border-bottom: 1px solid #aaa;
 }
 
-#generate-password:hover{
+#open-generate-password:hover{
     color: #024069;
 }
 
@@ -123,7 +123,8 @@ input:focus {
     margin-bottom: 0.5rem;
 }
 
-#register-form input[type="submit"] {
+#register-form input[type="submit"],
+#generate-password, #copy-password {
     color: #1b1b1b;
     background-color: #7795BB;
     opacity: .8;
@@ -136,8 +137,88 @@ input:focus {
     transition: .4s;
 }
 
-#register-form input[type="submit"]:hover{
+#register-form input[type="submit"]:hover, #generate-password:hover{
     opacity: 1;
     background-color: #324E84;
     color: white;
+}
+
+#generate-options{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #aaa;
+}
+
+#generate-options .form-control{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#generate-options label{
+    font-size: .8rem;
+}
+
+#generate-options input[type="text"]{
+    max-width: 30px;
+    max-height: 30px;
+    text-align: center;
+    border: 1px solid #aaa;
+}
+
+#generate-options button{
+    color: white;
+    background-color: #324d84b6;
+    display: block;
+    margin: 0 auto;
+}
+
+#copy-password{
+    color: #7795BB;
+    font-weight: bold;
+    margin: 1rem auto;
+    background-color: transparent;
+    border: 2px solid #7795BB;
+    padding: 0.7rem 1rem;
+}
+
+.form-control input{
+    border-radius: 5px;
+}
+
+.form-control input[type="checkbox"]{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--form-background);
+    margin: 0;
+    font: inherit;
+    color: #aaa;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.1rem solid currentColor;
+    border-radius: 0.1rem;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+.form-control input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: CanvasText;
+    color: #024069;
+}
+  
+.form-control input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+.hide{
+    display: none;
 }
